@@ -84,7 +84,6 @@ export default function HomePage() {
             {characters.map((character) => (
               <CharacterListCard
                 key={character.name}
-                myKey={character.name}
                 charName={character.name}
                 charLink={`/characters/${getCharacterId(character.url)}`}
               />

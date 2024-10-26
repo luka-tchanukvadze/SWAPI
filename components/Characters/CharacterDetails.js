@@ -60,7 +60,7 @@ export default function CharacterDetails() {
   };
 
   if (!character) {
-    return <div className="text-center mt-8">Loading...</div>;
+    return <Loading />;
   }
 
   const displayValue = (value) =>

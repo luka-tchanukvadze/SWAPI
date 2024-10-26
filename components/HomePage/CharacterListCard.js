@@ -1,10 +1,7 @@
 import Link from "next/link";
-const CharacterListCard = ({ myKey, charName, charLink }) => {
+const CharacterListCard = ({ charName, charLink }) => {
   return (
-    <div
-      key={myKey}
-      className="bg-gray-700 rounded-lg shadow-md overflow-hidden"
-    >
+    <div className="bg-gray-700 rounded-lg shadow-md overflow-hidden">
       <div className="p-4">
         <h2 className="text-xl font-semibold mb-2 text-yellow-400">
           {charName}
