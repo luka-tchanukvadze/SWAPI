@@ -67,16 +67,18 @@ export default function CharacterDetails() {
     value && value !== "n/a" ? value : "Unknown";
 
   return (
-    <div className="min-h-screen bg-gray-100 py-8 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-6">
+    <div className="min-h-screen bg-gray-900 py-8 px-4 sm:px-6 lg:px-8 text-yellow-300">
+      <div className="max-w-3xl mx-auto bg-gray-600 rounded-lg shadow-2xl p-6">
         <Link
           href="/"
-          className="inline-block mb-6 text-blue-500 hover:text-blue-600 transition-colors duration-300"
+          className="inline-block mb-6 text-yellow-300 hover:text-yellow-400 transition-colors duration-300"
         >
           &larr; Back to Home
         </Link>
 
-        <h1 className="text-3xl font-bold mb-4">{character.name}</h1>
+        <h1 className="text-3xl font-bold mb-4 text-yellow-300">
+          {character.name}
+        </h1>
 
         <div className="grid grid-cols-2 gap-4 mb-6">
           <p>
@@ -106,7 +108,7 @@ export default function CharacterDetails() {
           <div key={section} className="mb-4">
             <button
               onClick={() => toggleSection(section)}
-              className="w-full text-left p-3 bg-gray-200 rounded-md hover:bg-gray-300 transition-colors duration-300 focus:outline-none"
+              className="w-full text-left p-3 bg-gray-700 rounded-md hover:bg-gray-800 transition-colors duration-300 focus:outline-none text-yellow-300"
             >
               {section.charAt(0).toUpperCase() + section.slice(1)}
               <span className="float-right">
@@ -114,7 +116,7 @@ export default function CharacterDetails() {
               </span>
             </button>
             {expandedSection === section && (
-              <div className="mt-2 p-3 bg-gray-100 rounded-md">
+              <div className="mt-2 p-3 bg-gray-700 rounded-md">
                 {character[section].length === 0 ? (
                   <p>No info found</p>
                 ) : sectionDetails[section] ? (

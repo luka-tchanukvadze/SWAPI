@@ -10,17 +10,17 @@ const Pagination = ({
       <button
         onClick={handleClickPrevious}
         disabled={currentPage === 1 || isLoading}
-        className="px-4 py-2 bg-blue-500 text-white rounded-md disabled:opacity-50 hover:bg-blue-600 transition-colors duration-300"
+        className="px-4 py-2 bg-yellow-500 text-gray-800 rounded-md disabled:opacity-50 hover:bg-yellow-600 transition-colors duration-300"
       >
         Previous
       </button>
-      <span className="text-gray-700">
+      <span className="text-yellow-400">
         Page {currentPage} of {totalPages}
       </span>
       <button
         onClick={handleClickNext}
         disabled={currentPage === totalPages || isLoading}
-        className="px-4 py-2 bg-blue-500 text-white rounded-md disabled:opacity-50 hover:bg-blue-600 transition-colors duration-300"
+        className="px-4 py-2 bg-yellow-500 text-gray-800 rounded-md disabled:opacity-50 hover:bg-yellow-600 transition-colors duration-300"
       >
         Next
       </button>
